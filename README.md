@@ -92,6 +92,8 @@ Create a `.env` file in project root:
 GOOGLE_API_KEY=your_key_here
 EMAIL=your_email_here
 ```
+For more info on the API key, go here: https://aistudio.google.com/app/api-keys
+
 
 Important defaults:
 - MedGemma model: `google/medgemma-4b-it`
