@@ -42,7 +42,7 @@ To bypass these data compliance hurdles, Pathos splits how it handles memory int
 3. **Query & Synthesize:** Submit one query and instantly receive patient similarity matches, targeted literature matches, and a MedGemma grounded summary with phrase-level traceability.
 
 ### Impact and Feasibility
-This isn't just a theoretical wrapper; the repo ships with real, ready-to-use data. It includes 946 cleaned PubMed Central articles across oncology, neurology, pediatrics, and cardiology. That's about 29MB of cleaned text broken into roughly 63,000 dense retrieval chunks. The persistent vector store is highly optimized, taking up only ~366 MB of disk space, making it incredibly easy to deploy.
+This isn't just a theoretical wrapper; it is built to handle real clinical scale out of the box. To keep the GitHub repository lightweight and instantly deployable, we don't bloat the repo with hundreds of megabytes of vector data. Instead, the project ships with the dataset-building agent ready to go.
 
 The MVP runs locally, but the architecture is abstracted so an IT team could easily route the LLM inference to a centralized hospital GPU API if the local machines are too weak. I wanted this to be usable right out of the box. The whole system is packaged standardly in ``pyproject.toml``. You just run:
 ```bash
