@@ -18,7 +18,12 @@ from app.application.ingest_patient_files import run_patient_files_ingestion_pip
 from app.application.search_context import run_search
 from app.services.ask import AskService
 
-st.set_page_config(page_title="Clinical Search", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(
+    page_title="Pathos",
+    page_icon=str(Path(__file__).with_name("logo.svg")),
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
 st.markdown(
     """
