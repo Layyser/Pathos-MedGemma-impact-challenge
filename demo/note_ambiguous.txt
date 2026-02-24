@@ -1,0 +1,5 @@
+Patient follow-up timeline:
+- Main visit documented on 05/03/24.
+- Lab portal also lists 2024-03-05 for the same encounter.
+- Legacy export contains 03-05-2024.
+- Ignore invalid value 31/31/2024.

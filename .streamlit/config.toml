@@ -1,0 +1,76 @@
+[theme]
+# Base theme inheritance
+base = "dark"
+
+# -------------------------------------------------------------------------
+# GEMINI CORE UI COLORS
+# -------------------------------------------------------------------------
+
+# Primary Accent: The "Gemini Blue" used for active states and send buttons
+primaryColor = "#4DA6FF"
+
+# Background: Deep Space Black (The actual background of the Gemini Web UI)
+backgroundColor = "#131314"
+
+# Secondary Background: Slightly lighter charcoal (Sidebar and input fields)
+secondaryBackgroundColor = "#1E1F20"
+
+# Text: High-contrast white (pure white for readability against deep black)
+textColor = "#FFFFFF"
+
+# -------------------------------------------------------------------------
+# UI SHAPES & FONTS
+# -------------------------------------------------------------------------
+
+# Font: Clean sans-serif (Matches Google Sans)
+font = "sans-serif"
+
+# Corner Radius: Gemini uses very rounded, "pill-shaped" UI elements
+baseRadius = "1.2rem"
+buttonRadius = "1.5rem"
+
+# -------------------------------------------------------------------------
+# GEMINI "SPARKLE" PALETTE (Overrides standard primaries)
+# -------------------------------------------------------------------------
+
+# These are the neon/pastel versions used in the Gemini logo gradient
+# and code syntax highlighting.
+
+# Red (Soft Salmon/Pink)
+redColor = "#FF8A80"
+
+# Orange (Pastel Orange)
+orangeColor = "#FFD180"
+
+# Yellow (Neon Yellow)
+yellowColor = "#FFFF8D"
+
+# Blue (Electric Blue)
+blueColor = "#82B1FF"
+
+# Green (Neon Mint)
+greenColor = "#B9F6CA"
+
+# Violet (Nebula Purple)
+violetColor = "#D7AEFB"
+
+# Gray (Subtle Gray for inactive text)
+grayColor = "#9AA0A6"
+
+# -------------------------------------------------------------------------
+# CHART CONFIGURATION
+# -------------------------------------------------------------------------
+
+# A sequence that mimics the Gemini logo gradient (Blue -> Purple -> Pink)
+chartCategoricalColors = [
+    "#4DA6FF", # Gemini Blue
+    "#D7AEFB", # Nebula Purple
+    "#FF8A80", # Soft Red/Pink
+    "#B9F6CA", # Mint Green
+    "#FFFF8D", # Neon Yellow
+    "#82B1FF", # Electric Blue
+    "#A7FFEB", # Cyan Accent
+    "#F48FB1", # Pink Accent
+    "#F8F9FA", # White Accent
+    "#5F6368"  # Dark Gray Accent
+]

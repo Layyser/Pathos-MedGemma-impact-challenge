@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pathos"
+version = "0.1.0"
+description = "A privacy-first, local RAG application for analyzing medical history using MedGemma"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Jorge Vico", email = "vicolorajorge@gmail.com"}
+]
+keywords = ["ai", "medical", "rag", "medgemma", "privacy", "offline"]
+
+# The Core Dependencies
+dependencies = [
+    "sentence-transformers",         # Embeddings
+    "torch",                         # Local LLM runtime
+    "peft",                          # LoRA adapters
+    "llama-index-core",              # LlamaIndex core modules
+    "llama-index-llms-huggingface",  # HuggingFaceLLM integration
+    "chromadb",                      # Vector DB
+    "streamlit",                     # Frontend
+    "pypdf",                         # PDF extraction
+    "python-docx",                   # DOCX extraction
+    "google-genai",                  # Cloud LLM query generation
+    "google-api-core",               # Imported directly in Google provider
+    "beautifulsoup4",                # PMC XML cleaning
+    "lxml",                          # XML parser backend
+    "biopython",                     # Bio.Entrez client
+    "python-dotenv"
+]
+
+[project.optional-dependencies] # Install these for development: pip install -e .[dev]
+dev = [
+    "pytest",           # Unit tests
+    "black",            # Code formatter
+    "ruff",             # Fast linter (replaces flake8/isort)
+    "mypy",             # Static type checker
+    "datasets",         # Data extraction
+    "pandas",           # Reading data
+    "trl",              # Training
+]
+
+[project.scripts] # Allows you to run the app by typing `pathos-run` in the terminal
+pathos-run = "streamlit.web.cli:main_run"
+
+# --- Tool Configurations ---
+
+[tool.setuptools.packages.find] # Scans the current directory for the 'src' or package folders
+where = ["."]
+
+[tool.ruff] # Ruff configuration to match Google Style Guide
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"] # Error, Pyflakes, Isort, Bugbear
+ignore = ["E501"] # Ignore line length violations (let Black handle formatting)
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
